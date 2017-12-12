@@ -2,7 +2,7 @@
 
 1. Run composer
 
-`composer require vitalcrazz/click_admin_menu:dev-master`
+`composer require meta-systems/click_admin_menu:dev-master`
 
 2. Install module
 
