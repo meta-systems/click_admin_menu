@@ -1,0 +1,4 @@
+id: 5
+label: 'Блоки'
+link: '/admin/structure/block'
+weight: -6

@@ -1,0 +1,4 @@
+id: 9
+label: 'Синонимы'
+link: '/admin/config/search/path/patterns'
+weight: -2

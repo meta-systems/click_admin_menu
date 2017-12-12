@@ -1,0 +1,4 @@
+id: 12
+label: 'Пользователи'
+link: '/admin/people'
+weight: 1

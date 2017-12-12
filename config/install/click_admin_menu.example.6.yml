@@ -1,0 +1,4 @@
+id: 6
+label: 'Clear cache'
+link: '/click_admin_menu/clear_cache'
+weight: -5

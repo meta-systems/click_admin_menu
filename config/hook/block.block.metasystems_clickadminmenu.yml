@@ -1,0 +1,26 @@
+uuid: aea60505-52ce-4a76-9f4b-55e7433d78cd
+langcode: ru
+status: true
+dependencies:
+  module:
+    - click_admin_menu
+    - user
+id: metasystems_clickadminmenu
+theme: bartik
+region: content
+weight: -4
+provider: null
+plugin: clickmenu
+settings:
+  id: clickmenu
+  label: 'click admin menu'
+  provider: click_admin_menu
+  label_display: '0'
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      administrator: administrator
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

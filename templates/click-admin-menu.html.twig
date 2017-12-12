@@ -1,0 +1,11 @@
+<div class="adminMenuP">
+    <a href="/click_admin_menu/clear_cache" title="Clear Cache" class="adminMenuCC"></a>
+    <a href="#" class="adminMenuOpen" title="Admin menu"></a>
+
+    <div class="adminMenu">
+        <div class="adminMenuTitle">{{title}}</div>
+        {% for item in items %}
+            <a href="{{item.link}}"{% if target %} target="_blank"{% endif %}>{{item.label}}</a>
+        {% endfor %}
+    </div>
+</div>

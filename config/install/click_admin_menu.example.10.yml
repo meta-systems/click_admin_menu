@@ -1,0 +1,4 @@
+id: 10
+label: 'Типы материалов'
+link: '/admin/structure/types'
+weight: -1

@@ -1,0 +1,9 @@
+click_admin_menu.admin.tab_1:
+  route_name: click_admin_menu.settings_form
+  title: 'Settings'
+  base_route: click_admin_menu.settings_form
+  
+click_admin_menu.admin.tab_2:
+  route_name: entity.example.collection
+  title: 'Menu items'
+  base_route: click_admin_menu.settings_form

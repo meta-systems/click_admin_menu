@@ -1,0 +1,13 @@
+<?php
+
+function click_admin_menu_theme($existing, $type, $theme, $path) {
+    return [
+        'click_admin_menu' => [
+            'variables' => [
+                'items' => [],
+                'title' => '',
+                'target' => false,
+            ],
+        ],
+    ];
+}

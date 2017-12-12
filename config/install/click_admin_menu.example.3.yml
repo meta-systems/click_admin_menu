@@ -1,0 +1,4 @@
+id: 3
+label: 'Содержимое'
+link: '/admin/content'
+weight: -8

@@ -1,0 +1,6 @@
+name: 'Click admin menu'
+type: module
+description: 'Admin menu that appears on click'
+package: Administration
+core: 8.x
+configure: click_admin_menu.settings_form

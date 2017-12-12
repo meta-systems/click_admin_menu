@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements hook_install().
+ *
+ */
+function click_admin_menu_install() {
+    $content = file_get_contents(__DIR__.'/config/hook/block.block.metasystems_clickadminmenu.yml');
+    $data = \Symfony\Component\Yaml\Yaml::parse($content);
+    $data['theme'] = \Drupal::service('theme.manager')->getActiveTheme()->getName();
+    
+    $config = \Drupal::service('config.factory')->getEditable('block.block.metasystems_clickadminmenu');
+    $config->setData($data)->save(); 
+}

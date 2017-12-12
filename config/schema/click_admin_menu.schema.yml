@@ -1,0 +1,27 @@
+click_admin_menu.settings:
+  type: config_object
+  label: 'Admin menu settings'
+  mapping:
+    link_target:
+      type: boolean
+      label: 'Link target'
+    page_title:
+      type: string
+      label: 'Page title'
+
+click_admin_menu.example.*:
+  type: config_entity
+  label: 'Example config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    link:
+      type: string
+      label: 'Link'
+    weight:
+      type: integer
+      label: 'Order'

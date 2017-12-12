@@ -1,0 +1,4 @@
+id: 15
+label: 'Configure'
+link: '/admin/config/click_admin_menu'
+weight: 4

@@ -1,0 +1,47 @@
+click_admin_menu.settings_form:
+  path: '/admin/config/click_admin_menu'
+  defaults:
+    _title: 'Admin menu settings'
+    _form: 'Drupal\click_admin_menu\Form\AdminMenuSettingsForm'
+  requirements:
+    _permission: 'administer click_admin_menu'
+
+click_admin_menu.clear_cache:
+  path: '/click_admin_menu/clear_cache'
+  defaults:
+    _controller: '\Drupal\click_admin_menu\Controller\ClickAdminMenuController::clearCache'
+    _title: 'Clear cache'
+  requirements: 
+    _permission: 'access content'
+    
+entity.example.collection:
+  path: '/admin/config/click_admin_menu/list'
+  defaults:
+    _entity_list: 'example'
+    _title: 'Admin menu items'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.example.add_form:
+  path: '/admin/config/click_admin_menu/add'
+  defaults:
+    _entity_form: 'example.add'
+    _title: 'Add menu item'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.example.edit_form:
+  path: '/admin/config/click_admin_menu/{example}'
+  defaults:
+    _entity_form: 'example.edit'
+    _title: 'Edit menu item'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.example.delete_form:
+  path: '/admin/config/click_admin_menu/{example}/delete'
+  defaults:
+    _entity_form: 'example.delete'
+    _title: 'Delete menu item'
+  requirements:
+    _permission: 'administer site configuration'
