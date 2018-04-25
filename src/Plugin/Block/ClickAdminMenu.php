@@ -28,10 +28,14 @@ class ClickAdminMenu extends BlockBase {
         uasort($configEntities, [Example::class, 'sort']);
         
         $config = \Drupal::config('click_admin_menu.settings');
-        
+
+        $shortcutArray = shortcut_renderable_links();
+        $shortcutLinks = $shortcutArray['#links'];
+
         $renderable = [
             '#theme' => 'click_admin_menu',
             '#items' => $configEntities,
+            '#shortcuts' => $shortcutLinks,
             '#title' => $config->get('click_admin_menu.page_title'),
             '#target' => $config->get('click_admin_menu.link_target'),
         ];

@@ -7,5 +7,8 @@
         {% for item in items %}
             <a href="{{item.link}}"{% if target %} target="_blank"{% endif %}>{{item.label}}</a>
         {% endfor %}
+        {% for shortcut in shortcuts %}
+            <a href="{{shortcut.url}}"{% if target %} target="_blank"{% endif %}>{{shortcut.title}}</a>
+        {% endfor %}
     </div>
 </div>

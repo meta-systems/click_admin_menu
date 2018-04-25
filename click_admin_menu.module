@@ -5,6 +5,7 @@ function click_admin_menu_theme($existing, $type, $theme, $path) {
         'click_admin_menu' => [
             'variables' => [
                 'items' => [],
+                'shortcuts' => [],
                 'title' => '',
                 'target' => false,
             ],
