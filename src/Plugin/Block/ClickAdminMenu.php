@@ -39,6 +39,9 @@ class ClickAdminMenu extends BlockBase {
             '#title' => $config->get('click_admin_menu.page_title'),
             '#target' => $config->get('click_admin_menu.link_target'),
         ];
+        $renderable['#cache'] = [
+            'max-age' => 0,
+        ];
         $rendered = drupal_render($renderable);
     
 		return [
