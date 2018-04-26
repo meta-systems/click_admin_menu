@@ -10,5 +10,15 @@ function click_admin_menu_install() {
     $data['theme'] = \Drupal::service('theme.manager')->getActiveTheme()->getName();
     
     $config = \Drupal::service('config.factory')->getEditable('block.block.metasystems_clickadminmenu');
-    $config->setData($data)->save(); 
+    $config->setData($data)->save();
+
+    /**
+     * Shortcut settings for a theme
+     * @see https://drupal.stackexchange.com/questions/256197/d8-i-changed-my-administration-theme-and-now-the-shortcut-button-isnt-visible
+     */
+    $shortcut_settings_key = 'third_party_settings.shortcut.module_link';
+    $theme_settings = \Drupal::configFactory()->getEditable($data['theme'].'.settings');
+    if(!$theme_settings->get($shortcut_settings_key)) {
+        $theme_settings->set($shortcut_settings_key, TRUE)->save(TRUE);
+    }
 }
