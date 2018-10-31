@@ -1,3 +1,7 @@
+
+
+![alt text](https://raw.githubusercontent.com/meta-systems/click_admin_menu/master/img/cam.png)
+
 # Installation #
 
 1. Run composer
