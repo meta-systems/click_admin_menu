@@ -3,13 +3,27 @@
     <a href="#" class="adminMenuOpen" title="Admin menu"></a>
 
     <div class="adminMenu">
-        <div class="adminMenuTitle">{{title}}</div>
+        <div class="adminMenuTitle">
+            {{title}}
+            <a href="#" class="cam_icon_p click_admin_menu_add_btn" title="Add current page to menu">
+                <img class="cam_icon" src="/modules/contrib/click_admin_menu/img/add.svg" alt="Settings"/>
+            </a>
+            <a class="cam_icon_p" href="/admin/config/click_admin_menu" title="Settings">
+                <img class="cam_icon" src="/modules/contrib/click_admin_menu/img/settings.svg" alt="Settings"/>
+            </a>
+        </div>
+
         {% for item in items %}
-            <a href="{{item.link}}"{% if target %} target="_blank"{% endif %}>{{item.label}}</a>
+            <div class="menu_item">
+                <a class="cam_edit" href="/admin/config/click_admin_menu/{{item.id}}">edit</a>
+                <a class="cam_link" href="{{item.link}}"{% if target %} target="_blank"{% endif %}>{{item.label}}</a>
+            </div>
         {% endfor %}
-        <a href="#" class="click_admin_menu_add_btn">Add a page</a>
+        ---------------------------
         {% for shortcut in shortcuts %}
-            <a href="{{shortcut.url}}"{% if target %} target="_blank"{% endif %}>{{shortcut.title}}</a>
+            <div class="menu_item">
+                <a class="cam_link" href="{{shortcut.url}}"{% if target %} target="_blank"{% endif %}>{{shortcut.title}}</a>
+            </div>
         {% endfor %}
     </div>
 </div>
