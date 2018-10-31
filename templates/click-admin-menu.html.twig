@@ -7,6 +7,7 @@
         {% for item in items %}
             <a href="{{item.link}}"{% if target %} target="_blank"{% endif %}>{{item.label}}</a>
         {% endfor %}
+        <a href="#" class="click_admin_menu_add_btn">Add a page</a>
         {% for shortcut in shortcuts %}
             <a href="{{shortcut.url}}"{% if target %} target="_blank"{% endif %}>{{shortcut.title}}</a>
         {% endfor %}

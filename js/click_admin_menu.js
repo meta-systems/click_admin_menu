@@ -14,9 +14,12 @@
 				$('.adminMenuP').removeClass('adminMenuVisible');
 			}
 		});
-		
-		
-		
+		$('.click_admin_menu_add_btn').click(function () {
+			var title = $('h1').text();
+			var url = '/click_admin_menu/add?title=';
+			window.location.href = url + title;
+        });
+
 		
     }
   };

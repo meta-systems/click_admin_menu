@@ -13,7 +13,15 @@ click_admin_menu.clear_cache:
     _title: 'Clear cache'
   requirements: 
     _permission: 'access content'
-    
+
+click_admin_menu.add_page:
+  path: '/click_admin_menu/add'
+  defaults:
+    _controller: '\Drupal\click_admin_menu\Controller\ClickAdminMenuController::addPage'
+    _title: 'Add current page'
+  requirements:
+    _permission: 'access content'
+
 entity.example.collection:
   path: '/admin/config/click_admin_menu/list'
   defaults:
