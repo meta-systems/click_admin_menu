@@ -11,3 +11,6 @@
 2. Install module
 
 `drush en click_admin_menu`
+
+# Update
+`composer update meta-systems/click_admin_menu`
