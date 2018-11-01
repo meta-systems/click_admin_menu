@@ -29,8 +29,14 @@ class ClickAdminMenu extends BlockBase {
         
         $config = \Drupal::config('click_admin_menu.settings');
 
-        $shortcutArray = shortcut_renderable_links();
-        $shortcutLinks = $shortcutArray['#links'];
+        $shortcutLinks = [];
+        $moduleHandler = \Drupal::service('module_handler');
+        if ($moduleHandler->moduleExists('shortcut')) {
+            $shortcutArray = shortcut_renderable_links();
+            if(array_key_exists('#links', $shortcutArray)) {
+                $shortcutLinks = $shortcutArray['#links'];
+            }
+        }
 
         $renderable = [
             '#theme' => 'click_admin_menu',
