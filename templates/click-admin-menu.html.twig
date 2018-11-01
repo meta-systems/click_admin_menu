@@ -1,17 +1,18 @@
-<div class="adminMenuP">
+<div class="camP">
     <a href="/click_admin_menu/clear_cache" title="Clear Cache" class="adminMenuCC"></a>
-    <a href="#" class="adminMenuOpen" title="Admin menu"></a>
+    <a href="#" class="cam_open" title="Admin menu"></a>
 
-    <div class="adminMenu">
-        <div class="adminMenuTitle">
-            {{title}}
-            <a href="#" class="cam_icon_p click_admin_menu_add_btn" title="Add current page to menu">
-                <img class="cam_icon" src="/modules/contrib/click_admin_menu/img/add.svg" alt="Settings"/>
-            </a>
-            <a class="cam_icon_p" href="/admin/config/click_admin_menu" title="Settings">
-                <img class="cam_icon" src="/modules/contrib/click_admin_menu/img/settings.svg" alt="Settings"/>
-            </a>
-        </div>
+    <div class="cam_navigation">
+        <a href="#" class="cam_icon_p click_admin_menu_add_btn" title="Add current page to menu">
+            <img class="cam_icon" src="/modules/contrib/click_admin_menu/img/add.svg" alt="Settings"/>
+        </a>
+        <a class="cam_icon_p" href="/admin/config/click_admin_menu" title="Settings">
+            <img class="cam_icon" src="/modules/contrib/click_admin_menu/img/settings.svg" alt="Settings"/>
+        </a>
+    </div>
+
+    <div class="cam">
+        
 
         {% for item in items %}
             <div class="menu_item">
