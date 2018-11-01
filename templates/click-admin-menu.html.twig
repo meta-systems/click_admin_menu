@@ -15,7 +15,7 @@
         
 
         {% for item in items %}
-            <div class="menu_item">
+            <div class="menu_item{% if last_added == item.id %} menu_item_last_added{% endif %}">
                 <a class="cam_edit" href="/admin/config/click_admin_menu/{{item.id}}">edit</a>
                 <a class="cam_link" href="{{item.link}}"{% if target %} target="_blank"{% endif %}>{{item.label}}</a>
             </div>

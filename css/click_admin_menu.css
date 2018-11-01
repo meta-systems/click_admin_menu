@@ -71,6 +71,9 @@ div.admin div.left { margin-left:0; }
 .menu_item:hover .cam_edit {
 	display:block !important;
 }
+.menu_item_last_added {
+	background-color:#FFE68E;
+}
 .cam_edit:hover {
 	background:#ccc;
 }

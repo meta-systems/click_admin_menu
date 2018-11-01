@@ -4,6 +4,7 @@ namespace Drupal\click_admin_menu\Controller;
 
 use Drupal\click_admin_menu\Entity\Example;
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\Core\TempStore\PrivateTempStore;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -50,12 +51,17 @@ class ClickAdminMenuController extends ControllerBase
         if(empty($label)) {
             $label = $referer;
         }
+        $id = 'auto_'.time();
         $entity = Example::create([
-            'id' => 'auto_'.time(),
+            'id' => $id,
             'link' => $referer,
             'label' => $label,
         ]);
         $entity->save();
+
+        /** @var PrivateTempStore $tempstore */
+        $tempstore = \Drupal::service('user.private_tempstore')->get('click_admin_menu');
+        $tempstore->set('last_added', $id);
 
         // Выполняем редирект
         return new RedirectResponse($referer);

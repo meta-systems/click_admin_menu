@@ -8,6 +8,7 @@ function click_admin_menu_theme($existing, $type, $theme, $path) {
                 'shortcuts' => [],
                 'title' => '',
                 'target' => false,
+                'last_added' => '',
             ],
         ],
     ];

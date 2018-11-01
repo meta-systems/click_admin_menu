@@ -7,6 +7,7 @@ namespace Drupal\click_admin_menu\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 use Drupal\click_admin_menu\Entity\Example;
+use Drupal\Core\TempStore\PrivateTempStore;
 
 /**
  * Provides my custom block.
@@ -38,12 +39,20 @@ class ClickAdminMenu extends BlockBase {
             }
         }
 
+        /** @var PrivateTempStore $tempstore */
+        $tempstore = \Drupal::service('user.private_tempstore')->get('click_admin_menu');
+        $last_added = $tempstore->get('last_added');
+        if($last_added) {
+            $tempstore->delete('last_added');
+        }
+
         $renderable = [
             '#theme' => 'click_admin_menu',
             '#items' => $configEntities,
             '#shortcuts' => $shortcutLinks,
             '#title' => $config->get('click_admin_menu.page_title'),
             '#target' => $config->get('click_admin_menu.link_target'),
+            '#last_added' => $last_added,
         ];
         $renderable['#cache'] = [
             'max-age' => 0,
