@@ -13,6 +13,6 @@
 `drush en click_admin_menu`
 
 # Update
-`composer update meta-systems/click_admin_menu`
-or
+`composer update meta-systems/click_admin_menu`  
+or  
 `sudo composer update meta-systems/click_admin_menu`
