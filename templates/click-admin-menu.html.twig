@@ -6,7 +6,7 @@
         <a href="#" class="cam_icon_p click_admin_menu_add_btn" title="Add current page to menu">
             <img class="cam_icon" src="/modules/contrib/click_admin_menu/img/add.svg" alt="Settings"/>
         </a>
-        <a class="cam_icon_p" href="/admin/config/click_admin_menu" title="Settings">
+        <a class="cam_icon_p" href="/admin/config/click_admin_menu/list" title="Settings">
             <img class="cam_icon" src="/modules/contrib/click_admin_menu/img/settings.svg" alt="Settings"/>
         </a>
     </div>
@@ -20,7 +20,7 @@
                 <a class="cam_link" href="{{item.link}}"{% if target %} target="_blank"{% endif %}>{{item.label}}</a>
             </div>
         {% endfor %}
-        ---------------------------
+        
         {% for shortcut in shortcuts %}
             <div class="menu_item">
                 <a class="cam_link" href="{{shortcut.url}}"{% if target %} target="_blank"{% endif %}>{{shortcut.title}}</a>
