@@ -11,7 +11,7 @@ div.admin div.left { margin-left:0; }
 .page-admin-index .dev-query, 
 .page-admin-index #breadcrumb {display:none;}
 .page-admin-index h3{ margin:0 0 7px;}
-.camP {
+.camP { 
 	position:fixed;
 	top:0; left:0;
 	z-index:999999;
@@ -103,7 +103,7 @@ div.admin div.left { margin-left:0; }
 	opacity:1;
 }
 .cam_icon_p:hover {
-	background:#FFF5D3;
+	background-color:#FFF5D3;
 }
 .cam_icon_p {
 	display:inline-block;
@@ -113,8 +113,18 @@ div.admin div.left { margin-left:0; }
 	display:block;
 	float:left;
 	border-radius:10px;
+	width:25px;
+	height:25px;
+}
+.click_admin_menu_add_btn {
+	background:url(/modules/contrib/click_admin_menu/img/add.svg) no-repeat center left;
+    background-size:25px 25px;
 }
 
+.click_admin_menu_settings_btn {
+	background:url(/modules/contrib/click_admin_menu/img/settings.svg) no-repeat center left;
+    background-size:25px 25px;
+}
 
 
 
